@@ -25,6 +25,13 @@
         "type": "git",
         "url": "https://github.com/chrisbakker/vscode-journal"
     },
+    "homepage": "https://github.com/chrisbakker/vscode-journal#readme",
+    "bugs": {
+        "url": "https://github.com/chrisbakker/vscode-journal/issues"
+    },
+    "author": {
+        "name": "Chris Bakker"
+    },
     "license": "MIT",
     "publisher": "chrisbakker",
     "main": "./out/extension.js",

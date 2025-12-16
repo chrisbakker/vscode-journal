@@ -1,6 +1,8 @@
-# Journal Extension for VS Code
+# Journal for VS Code
 
-A lightweight personal and work journaling extension for Visual Studio Code.
+A lightweight personal and work journaling extension for Visual Studio Code. Keep your daily notes organized with an interactive calendar and automatic file management.
+
+![Journal Icon](resources/journal-icon.png)
 
 ## Features
 
@@ -40,11 +42,23 @@ type: journal entry
 
 This extension works out of the box with no configuration required. All journal entries are stored in a `journal/` folder in your workspace root.
 
+### Optional Settings
+
+-   `journal.useStructuredEditor`: Enable the experimental structured block editor (default: `false`)
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 ## Known Issues
 
-None at this time.
+None at this time. Report issues on [GitHub](https://github.com/chrisbakker/vscode-journal/issues).
 
 ## Release Notes
+
+### 0.2.0
+
+Enhanced features and stability improvements.
 
 ### 0.1.0
 
