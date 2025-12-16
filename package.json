@@ -1,0 +1,94 @@
+{
+    "name": "vscode-journal",
+    "displayName": "Journal",
+    "description": "Personal and work journaling extension for VS Code",
+    "version": "0.2.0",
+    "icon": "resources/journal-icon.png",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "journal",
+        "diary",
+        "notes",
+        "markdown",
+        "calendar",
+        "daily",
+        "productivity",
+        "personal",
+        "work log"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chrisbakker/vscode-journal"
+    },
+    "license": "MIT",
+    "publisher": "chrisbakker",
+    "main": "./out/extension.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "journal",
+                    "title": "Journal",
+                    "icon": "resources/journal-icon.svg"
+                }
+            ]
+        },
+        "views": {
+            "journal": [
+                {
+                    "type": "webview",
+                    "id": "journalCalendar",
+                    "name": "Calendar"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "journal.openDay",
+                "title": "Open Journal Entry"
+            }
+        ],
+        "customEditors": [
+            {
+                "viewType": "journal.editor",
+                "displayName": "Journal Editor",
+                "selector": [
+                    {
+                        "filenamePattern": "**/journal/**/*.md"
+                    }
+                ],
+                "priority": "option"
+            }
+        ],
+        "configuration": {
+            "title": "Journal",
+            "properties": {
+                "journal.useStructuredEditor": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Use the structured block editor (Phase 2) instead of the standard Markdown editor (Phase 1)"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/node": "^20.x",
+        "@types/vscode": "^1.85.0",
+        "@typescript-eslint/eslint-plugin": "^6.x",
+        "@typescript-eslint/parser": "^6.x",
+        "eslint": "^8.x",
+        "typescript": "^5.3.0"
+    }
+}
